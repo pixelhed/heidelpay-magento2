@@ -395,7 +395,7 @@ class Payment extends AbstractHelper
             if ($order === null || $order->isEmpty() || $order->isCanceled()) {
                 // Ensure to use the currency of the quote.
                 $quote->getStore()->setCurrentCurrencyCode($quote->getQuoteCurrencyCode());
-                $quote->collectTotals();
+//                $quote->collectTotals();
                 // in case of guest checkout, set some customer related data.
                 if ($quote->getCustomerId() === null) {
                     $quote->setCustomerId(null)
